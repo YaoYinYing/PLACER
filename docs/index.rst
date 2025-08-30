@@ -1,0 +1,5 @@
+PLACER
+======
+
+.. automodule:: placer
+    :members:
