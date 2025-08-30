@@ -1,0 +1,44 @@
+[build-system]
+requires = ["flit_core >=2,<4"]
+build-backend = "flit_core.buildapi"
+
+[project]
+name = "placer"
+version = "0.1.0"
+description = "Protein-Ligand Atomistic Conformational Ensemble Resolver"
+readme = "README.md"
+requires-python = ">=3.9"
+authors = [{name = "PLACER authors"}]
+dependencies = [
+  "torch<=2.3.0",
+  "dgl<3",
+  "openbabel<4",
+  "networkx>=3.2",
+  "numpy>=1.22",
+  "pandas>=2",
+  "e3nn<1",
+  "opt_einsum<4",
+  "biopython<2"
+]
+
+[project.optional-dependencies]
+test = [
+  "pytest",
+  "pytest-xdist",
+  "pytest-cov",
+]
+docs = [
+  "sphinx",
+  "sphinx-rtd-theme",
+]
+
+[project.scripts]
+placer = "placer.cli:main"
+
+[tool.flit.sdist]
+exclude = [
+  "**/__pycache__/**",
+  "**/*.pyc",
+  "**/*.pyo",
+  "**/.DS_Store"
+]

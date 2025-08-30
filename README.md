@@ -1,4 +1,27 @@
 # PLACER
+
+This repository refactors PLACER into a pip-installable package with a
+cleaner API and tooling.
+
+## Installation
+
+```bash
+pip install placer[test]
+```
+
+## Usage
+
+```python
+from placer import InferenceRunner
+
+runner = InferenceRunner()
+```
+
+---
+
+## Original README
+
+# PLACER
 #### <ins>P</ins>rotein-<ins>L</ins>igand <ins>A</ins>tomistic <ins>C</ins>onformational <ins>E</ins>nsemble <ins>R</ins>esolver
 
 ![image](https://github.com/user-attachments/assets/78d7fc0e-ab45-4879-abf5-1145a948a7fb)
